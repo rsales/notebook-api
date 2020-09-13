@@ -1,4 +1,6 @@
 class Contact < ApplicationRecord
+  belongs_to :kind, foreign_key: "kind_id"
+
   def author
     "Rafael Sales"
   end
