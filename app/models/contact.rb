@@ -1,5 +1,7 @@
 class Contact < ApplicationRecord
-  belongs_to :kind, foreign_key: "kind_id", optional: true
+  # Associations
+  belongs_to :kind, foreign_key: "kind_id" #, optional: true
+  has_many :phones
 
   # def birthdate_br
   #   I18n.l(self.birthdate) unless self.birthdate.blank?
