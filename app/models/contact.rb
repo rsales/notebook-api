@@ -2,8 +2,10 @@ class Contact < ApplicationRecord
   # Associations
   belongs_to :kind, foreign_key: "kind_id" #, optional: true
   has_many :phones
+  has_one :address
 
   accepts_nested_attributes_for :phones, allow_destroy: true
+  accepts_nested_attributes_for :address
 
   def as_json(options={})
     hash = super(options)
