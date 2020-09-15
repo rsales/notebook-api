@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
   # Associations
-  belongs_to :kind, foreign_key: "kind_id" #, optional: true
+  belongs_to :kind #, optional: true
   has_many :phones
   has_one :address
 
